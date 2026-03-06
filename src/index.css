@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #0a0e14;
+  --color-navy-900: #0f141d;
+  --color-navy-800: #1a222e;
+  --color-pastel-blue: #a5c9e1;
+  --color-cream: #fdfcf0;
+  --color-cream-muted: #d1cfc0;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-navy-950 text-cream-muted font-serif antialiased selection:bg-pastel-blue/30;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif text-cream;
+  }
+}
+
+.glass-card {
+  @apply bg-navy-900/40 border border-white/5 backdrop-blur-sm rounded-sm;
+}
+
+.nav-link {
+  @apply px-4 py-2 text-xs uppercase tracking-widest transition-all hover:text-pastel-blue;
+}
+
+.tooltip-trigger {
+  @apply border-b border-pastel-blue/40 cursor-help text-pastel-blue transition-colors hover:text-pastel-blue/80;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl mb-8 border-b border-white/5 pb-4 font-light italic;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
